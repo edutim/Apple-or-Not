@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAX-lW-ei0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Apple or Not-->
+        <scene sceneID="N6e-dW-eh8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="bAX-lW-ei0" customClass="MLViewController" customModule="Farm_Face" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DuP-yA-oDI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bT-1K-OXa">
+                                <rect key="frame" x="29" y="44" width="356" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="475" id="Jsp-Tb-hTn"/>
+                                    <constraint firstAttribute="width" constant="356" id="ocV-lf-pvL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qc-yF-mvz">
+                                <rect key="frame" x="125" y="742" width="164" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Is it an apple?"/>
+                                <connections>
+                                    <action selector="onTapTakePhoto:" destination="bAX-lW-ei0" eventType="touchUpInside" id="7et-JU-kli"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdG-tI-HYd">
+                                <rect key="frame" x="82.5" y="221.5" width="249" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8bT-1K-OXa" firstAttribute="top" secondItem="GVu-a1-cbT" secondAttribute="top" id="7uI-QK-YC3"/>
+                            <constraint firstItem="8bT-1K-OXa" firstAttribute="centerX" secondItem="DuP-yA-oDI" secondAttribute="centerX" id="POe-OT-62w"/>
+                            <constraint firstItem="MdG-tI-HYd" firstAttribute="centerX" secondItem="8bT-1K-OXa" secondAttribute="centerX" id="UUa-Zy-i18"/>
+                            <constraint firstItem="MdG-tI-HYd" firstAttribute="centerY" secondItem="8bT-1K-OXa" secondAttribute="centerY" id="dd3-Vc-Uec"/>
+                            <constraint firstItem="5qc-yF-mvz" firstAttribute="centerX" secondItem="DuP-yA-oDI" secondAttribute="centerX" id="kUy-Nu-brO"/>
+                            <constraint firstItem="GVu-a1-cbT" firstAttribute="bottom" secondItem="5qc-yF-mvz" secondAttribute="bottom" constant="74" id="mGI-pT-cW8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GVu-a1-cbT"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Apple or Not" id="XA8-8A-edd"/>
+                    <connections>
+                        <outlet property="previewView" destination="8bT-1K-OXa" id="8nh-it-bXJ"/>
+                        <outlet property="responseLabel" destination="MdG-tI-HYd" id="rcg-i4-jE5"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jj6-6p-Rtm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="839" y="138"/>
         </scene>
     </scenes>
 </document>

@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4A10540422EBC210004E465F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10540322EBC210004E465F /* AppDelegate.swift */; };
-		4A10540622EBC210004E465F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10540522EBC210004E465F /* ViewController.swift */; };
 		4A10540922EBC210004E465F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A10540722EBC210004E465F /* Main.storyboard */; };
 		4A10540B22EBC211004E465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A10540A22EBC211004E465F /* Assets.xcassets */; };
 		4A10540E22EBC211004E465F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A10540C22EBC211004E465F /* LaunchScreen.storyboard */; };
+		4A10541622EBC22B004E465F /* MLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10541522EBC22B004E465F /* MLViewController.swift */; };
+		4A10541822EBC235004E465F /* Fruit.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4A10541722EBC235004E465F /* Fruit.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A10540022EBC210004E465F /* Apple or Not.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple or Not.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A10540322EBC210004E465F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A10540522EBC210004E465F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A10540822EBC210004E465F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A10540A22EBC211004E465F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A10540D22EBC211004E465F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A10540F22EBC211004E465F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A10541522EBC22B004E465F /* MLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLViewController.swift; sourceTree = "<group>"; };
+		4A10541722EBC235004E465F /* Fruit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Fruit.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				4A10540322EBC210004E465F /* AppDelegate.swift */,
-				4A10540522EBC210004E465F /* ViewController.swift */,
+				4A10541522EBC22B004E465F /* MLViewController.swift */,
+				4A10541722EBC235004E465F /* Fruit.mlmodel */,
 				4A10540722EBC210004E465F /* Main.storyboard */,
 				4A10540A22EBC211004E465F /* Assets.xcassets */,
 				4A10540C22EBC211004E465F /* LaunchScreen.storyboard */,
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A10540622EBC210004E465F /* ViewController.swift in Sources */,
+				4A10541622EBC22B004E465F /* MLViewController.swift in Sources */,
 				4A10540422EBC210004E465F /* AppDelegate.swift in Sources */,
+				4A10541822EBC235004E465F /* Fruit.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HDYZY8AP6;
 				INFOPLIST_FILE = "Apple or Not/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HDYZY8AP6;
 				INFOPLIST_FILE = "Apple or Not/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
