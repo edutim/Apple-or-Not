@@ -90,7 +90,6 @@ class MLViewController: UIViewController {
         let photoSettings = AVCapturePhotoSettings()
         
         // Set photo settings for our need
-        photoSettings.isAutoStillImageStabilizationEnabled = true
         photoSettings.isHighResolutionPhotoEnabled = true
         photoSettings.flashMode = .auto
         
@@ -119,7 +118,7 @@ class MLViewController: UIViewController {
         do {
             
             // MARK: - Change the model here.
-            let model = try VNCoreMLModel(for: Fruit().model)
+            let model = try VNCoreMLModel(for: Fruit(configuration: .init()).model)
 
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
@@ -225,6 +224,7 @@ extension MLViewController : AVCapturePhotoCaptureDelegate {
         guard let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
             return
         }
+        
         
         // Initialise an UIImage with our image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
